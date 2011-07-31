@@ -1,0 +1,57 @@
+##############################################
+#  Settings
+##############################################
+background yes
+use_xft yes
+xftfont silkscreen:size=6.44
+xftalpha 1
+#font snap-7
+text_buffer_size 2048
+update_interval 0.50
+total_run_times 0
+own_window yes
+own_window_transparent yes
+own_window_type dock
+own_window_colour 262729
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+double_buffer yes
+draw_shades yes
+draw_outline no
+draw_borders no
+draw_graph_borders no
+default_color 789922
+default_shade_color black
+default_outline_color white
+gap_x 4
+gap_y 4
+no_buffers yes
+uppercase no
+cpu_avg_samples 2
+override_utf8_locale no
+temperature_unit celsius
+alignment top_center
+
+### CHANGES ###
+
+alignment bl ## top_center
+
+
+minimum_size 1910 1
+
+#to change MiB and GiB to M and G
+short_units no
+# % valses at 2 decimals - goto acts on the decimal point
+pad_percents 2
+# limit the length of the output
+top_name_width 2
+
+# uptime to uptime_short (no seconds)
+
+##############################################
+#  Output
+##############################################
+TEXT
+${color f92672}Debian Wheezy ${color} | ${color beed5f}Machine:${color d3d3d3} $nodename | ${color fd971f} Uptime:${color d3d3d3} $uptime ${color}| ${color ff669d}Kernel: ${color d3d3d3} $kernel | ${color 9e6ffe}Cpu: ${color e3e3e3}${cpu cpu0}% | ${color 00CBEE}Ram: ${color d3d3d3}${mem}/${memmax} | ${color}System: ${color e0e0e0}${font}${fs_used /} | ${color}Home: ${color e1e1e1}${font}${fs_used /home}/${fs_size /home}  ${color D45959} Down: ${color e0e0e0} ${downspeed wlan0} | ${color D45959} Up: ${color} ${color e0e0e0} ${upspeed wlan0} | ${color E54954} Weather: ${color e0e0e0}${execi 300 /home/jon/scripts/weather.sh 48183} | ${color G767676} Title: ${color e0e0e0}${mpd_title} | ${color D45951}Artist: ${color e0e0e0}${mpd_artist} | ${color F21212}Album: ${color e0e0e0}${mpd_album} | ${color 900319} Length: ${color e0e0e0}${mpd_elapsed}/${mpd_length} | ${color a6e22e}Network: ${color e0e0e0} ${wireless_essid wlan0} ${wireless_mode wlan0} ${wireless_link_qual_perc wlan0}%
+#${rss http://ws.audioscrobbler.com/1.0/user/Viconomia/recenttracks.rss 1 item_titles 5 }
+#${alignc} ${color d3d3d3} CPU: Usage:${cpu cpu0}% | HDD: System ${fs_used /}/${fs_size /} | Home:${fs_used /home}/${fs_size /home} | RAM: $mem/$memmax | Weather: ${execi 300 /home/jon/scripts/weather.sh 48183} | Title: ${mpd_title} | Artist: ${mpd_artist} | Album: ${mpd_album} | Time: ${mpd_elapsed}/${mpd_length}
+#By Vicophine (A.K.A Viconomia)
